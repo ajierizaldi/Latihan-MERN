@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const dbConnect = async () => {
     try {
-        await mongoose.connect("mongodb+srv://admin:2QTCCW3Cse9K6euO@task-api.hgqxpkp.mongodb.net/?retryWrites=true&w=majority", {
+        await mongoose.connect(process.env.MONGO_URI, {
             // useCreateIndex: true,
             // useFindAndModify: true,
             useUnifiedTopology: true,
